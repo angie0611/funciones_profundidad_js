@@ -55,6 +55,22 @@ const data = [
 --> texto
 
 */
+function Post(titulo, avatar, texto) {
+  this.titulo = titulo;
+  this.avatar = avatar;
+  this.texto = texto;
+}
+
+let posts = [];
+
+for (let i = 0; i < data.length; i++) {
+  let post = new Post(data[i].titulo, data[i].avatar, data[i].texto);
+  posts.push(post);
+}
+
+console.log(posts);
+
+localStorage.setItem('data', JSON.stringify (data))
 
 
 
